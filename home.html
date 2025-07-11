@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #12121a;
+      font-family: Arial, sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    #contact {
+      padding: 60px 20px;
+      background-color: #12121a;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact-left, .contact-right {
+      flex: 1 1 300px;
+    }
+
+    .contact-left h2 {
+      font-size: 32px;
+      color: #00ffd5;
+      margin-bottom: 15px;
+    }
+
+    .contact-left p {
+      margin-bottom: 20px;
+      color: #cccccc;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1e1e2a;
+      color: white;
+      font-size: 16px;
+    }
+
+    .contact-buttons {
+      text-align: left;
+    }
+
+    .btn-main {
+      background-color: #00ffd5;
+      color: #12121a;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-main:hover {
+      background-color: #00d5b5;
+    }
+
+    .creative-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-circle {
+      opacity: 0;
+      transform: translateY(40px);
+      background-color: #1e1e2a;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 12px #00ffd566;
+      transition: 0.4s ease;
+    }
+
+    .contact-circle.animate {
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .contact-circle i {
+      font-size: 24px;
+      color: #00ffd5;
+      margin-bottom: 10px;
+    }
+
+    .contact-circle p {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .contact-circle a,
+    .contact-circle span {
+      color: #cccccc;
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-left,
+      .contact-right {
+        width: 100%;
+      }
+
+      .contact-buttons {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-left">
+      <h2>Get in Touch</h2>
+      <p>If you have any questions or just want to say hello, feel free to message me!</p>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <div class="contact-buttons">
+          <button type="submit" class="btn-main">Send Message</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-right creative-contact">
+      <div class="contact-circle">
+        <i class="fas fa-envelope"></i>
+        <p>Email Me</p>
+        <span>sachin@example.com</span>
+      </div>
+      <div class="contact-circle">
+        <i class="fas fa-phone-alt"></i>
+        <p>Call Me</p>
+        <span>+91 9876543210</span>
+      </div>
+      <div class="contact-circle">
+        <i class="fab fa-linkedin"></i>
+        <p>LinkedIn</p>
+        <a href="https://linkedin.com/in/sachin" target="_blank">/in/sachin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight - 100 && rect.bottom > 0;
+  }
+
+  function animateContactCircles() {
+    const circles = document.querySelectorAll('.contact-circle');
+    circles.forEach((circle, index) => {
+      if (isInViewport(circle) && !circle.classList.contains('animate')) {
+        setTimeout(() => {
+          circle.classList.add('animate');
+        }, index * 300);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateContactCircles);
+  window.addEventListener('load', animateContactCircles);
+</script>
+
+</body>
+</html>
+
+
+
+https://bootstrapmade.com/demo/Strategy/
+

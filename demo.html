@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Responsive</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #12121a;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    #about {
+      padding: 80px 20px;
+    }
+
+    .about-modern {
+      background: linear-gradient(145deg, #1e1e2f, #2b2b3d);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 255, 213, 0.3);
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    /* Photo */
+    .about-photo {
+      flex: 1 1 320px;
+      text-align: center;
+    }
+
+    .about-photo img {
+      width: 280px;
+      height: 280px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 30px #00ffd5aa;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .about-photo img:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow: 0 0 40px #00ffd5ff;
+    }
+
+    /* Text */
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-size: 42px;
+      margin-bottom: 25px;
+      color: #00ffd5;
+      text-shadow: 0 0 10px #00ffd5aa;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #d1d1d1;
+    }
+
+    /* Skills */
+    .skills-list {
+      margin: 20px 0;
+      list-style: none;
+    }
+
+    .skills-list li {
+      margin: 10px 0;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    .skills-list li::before {
+      content: "💡";
+      margin-right: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    .skills-list li:nth-child(2)::before { content: "⚛️"; }
+    .skills-list li:nth-child(3)::before { content: "🎨"; }
+    .skills-list li:nth-child(4)::before { content: "🐍"; }
+    .skills-list li:nth-child(5)::before { content: "📈"; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Button */
+    .about-btn {
+      display: inline-block;
+      padding: 14px 34px;
+      border: 2px solid #00ffd5;
+      color: #00ffd5;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.4s, color 0.4s, transform 0.3s;
+      box-shadow: 0 0 10px #00ffd5aa;
+    }
+
+    .about-btn:hover {
+      background: #00ffd5;
+      color: #12121a;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffd5ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .about-text h2 { font-size: 32px; }
+      .about-photo img { width: 220px; height: 220px; }
+    }
+
+    @media (max-width: 768px) {
+      .about-wrapper { flex-direction: column; text-align: center; }
+      .about-text h2 { font-size: 28px; }
+      .about-photo img { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- About Section -->
+  <section id="about" class="about-modern">
+    <div class="about-wrapper">
+      <div class="about-photo">
+        <img src="image/sachin1.jpg" alt="Sachin's Photo">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Dantani Sachin</strong>, a passionate <em>Web Developer</em> and <em>B.Com student</em> from Kanpur, India.</p>
+        <p>I specialize in crafting clean, responsive, and user-friendly web applications. With a strong foundation in both technology and business, I bring a unique perspective to every project I work on.</p>
+        <p>When I’m not coding, you’ll find me exploring the latest trends in UI/UX design, experimenting with new JavaScript frameworks, or diving into entrepreneurship ideas.</p>
+        <ul class="skills-list">
+          <li> Strong fundamentals in <strong>HTML, CSS, JavaScript</strong></li>
+          <li> Experienced with <strong>React</strong> and <strong>jQuery</strong></li>
+          <li> Skilled in <strong>Figma</strong> for UI/UX design</li>
+          <li> Basics of <strong>Python</strong> for automation</li>
+          <li> Business & tech mindset for scalable solutions</li>
+        </ul>
+        <a href="image/Sachin_Resume_python (1).pdf" class="about-btn" target="_blank">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

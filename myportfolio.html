@@ -453,230 +453,125 @@
             transform: scale(1.08);
         }
 
-        #about{
-            -overflow: hidden;
-        }
-
-       .about-modern {
-    background: linear-gradient(145deg, #1e1e2f, #2b2b3d);
-    padding: 100px 20px;
-    color: #fff;
-    position: relative;
-    -overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 255, 213, 0.3);
-     overflow: visible !important;
-}
-
-.about-wrapper {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(12px);
-    background: rgba(30, 30, 47, 0.7);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: inset 0 0 10px #00ffd5aa;
-}
-
-.about-photo {
-    flex: 1 1 320px;
-    text-align: center;
-    transition: transform 0.5s ease;
-    cursor: pointer;
-    box-shadow: 0 0 30px #00ffd5aa;
-    border-radius: 20px;
-}
-
-.about-photo img {
-    width: 280px;
-    height: 280px;
-    border-radius: 20px;
-    object-fit: cover;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.about-photo:hover {
-    transform: scale(1.05) rotate(3deg);
-    box-shadow: 0 0 40px #00ffd5ff;
-}
-
-.about-text {
-    flex: 1 1 600px;
-}
-
-.about-text h2 {
-    font-size: 42px;
-    margin-bottom: 25px;
-    color: #00ffd5;
-    letter-spacing: 1.2px;
-    text-shadow: 0 0 10px #00ffd5aa;
-}
-
-.about-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #d1d1d1;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-}
-
-
-
-.about-btn {
-    display: inline-block;
-    padding: 14px 34px;
-    border: 2px solid #00ffd5;
-    color: #00ffd5;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    font-weight: 700;
-    letter-spacing: 1px;
-    box-shadow: 0 0 10px #00ffd5aa;
-}
-
-.about-btn:hover {
-    background-color: #00ffd5;
-    color: #12121a;
-    box-shadow: 0 0 30px #00ffd5ff;
-}
-
-/* Animations */
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideLeft 1s forwards;
-    animation-delay: 0.3s;
-}
-
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideRight 1s forwards;
-    animation-delay: 0.6s;
-}
-
-@keyframes slideLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
+         #about {
+      padding: 80px 20px;
     }
-}
 
-@keyframes slideRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    .about-modern {
+      background: linear-gradient(145deg, #1e1e2f, #2b2b3d);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 255, 213, 0.3);
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
     }
-}
 
-@media (max-width: 768px) {
     .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
     }
 
-    .about-text h2 {
-        font-size: 32px;
+    /* Photo */
+    .about-photo {
+      flex: 1 1 320px;
+      text-align: center;
     }
 
     .about-photo img {
-        width: 220px;
-        height: 220px;
+      width: 280px;
+      height: 280px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 30px #00ffd5aa;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
+    .about-photo img:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow: 0 0 40px #00ffd5ff;
+    }
+
+    /* Text */
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-size: 42px;
+      margin-bottom: 25px;
+      color: #00ffd5;
+      text-shadow: 0 0 10px #00ffd5aa;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #d1d1d1;
+    }
+
+    /* Skills */
     .skills-list {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      margin: 20px 0;
+      list-style: none;
     }
-}
-.fade-in-left {
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInLeft 1s forwards;
-  animation-delay: 0.3s;
-}
 
-.fade-in-right {
-  opacity: 0;
-  transform: translateX(30px);
-  animation: fadeInRight 1s forwards;
-  animation-delay: 0.6s;
-}
+    .skills-list li {
+      margin: 10px 0;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
 
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    .skills-list li::before {
+      content: "💡";
+      margin-right: 10px;
+      animation: bounce 2s infinite;
+    }
 
-@keyframes fadeInRight {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.about-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+    .skills-list li:nth-child(2)::before { content: "⚛️"; }
+    .skills-list li:nth-child(3)::before { content: "🎨"; }
+    .skills-list li:nth-child(4)::before { content: "🐍"; }
+    .skills-list li:nth-child(5)::before { content: "📈"; }
 
-.about-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 91, 187, 0.5);
-}
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
 
+    /* Button */
+    .about-btn {
+      display: inline-block;
+      padding: 14px 34px;
+      border: 2px solid #00ffd5;
+      color: #00ffd5;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.4s, color 0.4s, transform 0.3s;
+      box-shadow: 0 0 10px #00ffd5aa;
+    }
 
-.skills-list li {
-  margin: 10px 0;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-}
+    .about-btn:hover {
+      background: #00ffd5;
+      color: #12121a;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #00ffd5ff;
+    }
 
-.skills-list li::before {
-  content: '💡'; /* Default emoji */
-  margin-right: 10px;
-  display: inline-block;
-  animation: bounce 2s infinite;
-}
+    /* Responsive */
+    @media (max-width: 992px) {
+      .about-text h2 { font-size: 32px; }
+      .about-photo img { width: 220px; height: 220px; }
+    }
 
-/* Example: Change emoji for specific skills */
-.skills-list li:nth-child(2)::before { content: '⚛️'; }
-.skills-list li:nth-child(3)::before { content: '🎨'; }
-.skills-list li:nth-child(4)::before { content: '🐍'; }
-.skills-list li:nth-child(5)::before { content: '📈'; }
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-.about-photo img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.5s ease;
-}
-
-.about-photo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
+    @media (max-width: 768px) {
+      .about-wrapper { flex-direction: column; text-align: center; }
+      .about-text h2 { font-size: 28px; }
+      .about-photo img { width: 200px; height: 200px; }
+    }
 
 
 
@@ -907,9 +802,10 @@
 
 
 
+/* Section Styling */
 .projects-section {
   background: linear-gradient(145deg, #1e1e2f, #2b2b3d);
-  padding: 100px 20px;
+  padding: 80px 20px;
   color: #fff;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 255, 213, 0.3);
@@ -921,15 +817,19 @@
   max-width: 1200px;
   margin: auto;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
+/* Grid Layout */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  animation: fadeUp 1s ease-in-out forwards;
+  gap: 30px;
+  margin-top: 40px;
 }
 
+/* Project Card */
 .project-card {
   background-color: #222;
   border: 1px solid #00ffd5;
@@ -948,50 +848,34 @@
   box-shadow: 0 0 25px #00ffd5cc;
 }
 
+/* Project Image Placeholder */
 .project-thumb {
-  height: 150px;
+  height: 180px;
   border-radius: 12px;
   background: linear-gradient(135deg, #00ffd5, #008c99);
   margin-bottom: 20px;
   animation: shine 2s linear infinite;
 }
 
+/* Titles & Text */
 .project-title {
-  font-size: 22px;
+  font-size: 20px;
   color: #00ffd5;
   margin-bottom: 10px;
   text-shadow: 0 0 5px #00ffd5aa;
 }
 
 .project-desc {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
-/* Animations */
-@keyframes fadeUpCard {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shine {
-  0% {
-    background-position: -100px;
-  }
-  100% {
-    background-position: 200px;
-  }
-}
-
-
-
+/* Buttons */
 .project-buttons {
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -1012,122 +896,53 @@
   color: white;
 }
 
-
-
-
-
-
-.projects-section {
-  position: relative;
-  background: #1e1e2f;
-  padding: 100px 20px;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 255, 213, 0.2);
-  z-index: 1;
-}
-
+/* Bubble Animation */
 .bubbles {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   overflow: hidden;
   z-index: 0;
 }
-
 .bubbles span {
   position: absolute;
   bottom: -50px;
-  width: 20px;
-  height: 20px;
+  width: 20px; height: 20px;
   background: rgba(0, 255, 213, 0.2);
   border-radius: 50%;
   animation: bubble 20s linear infinite;
 }
-
-.bubbles span:nth-child(1) {
-  left: 10%;
-  animation-duration: 15s;
-  animation-delay: 0s;
-}
-
-.bubbles span:nth-child(2) {
-  left: 20%;
-  animation-duration: 20s;
-  animation-delay: 1s;
-}
-
-.bubbles span:nth-child(3) {
-  left: 30%;
-  animation-duration: 25s;
-  animation-delay: 3s;
-}
-.bubbles span:nth-child(4) {
-  left: 40%;
-  animation-duration: 30s;
-  animation-delay: 6s;
-}
-.bubbles span:nth-child(5) {
-  left: 45%;
-  animation-duration: 35s;
-  animation-delay: 9s;
-}
-.bubbles span:nth-child(6) {
-  left: 50%;
-  animation-duration: 40s;
-  animation-delay: 8s;
-}
-.bubbles span:nth-child(7) {
-  left: 55%;
-  animation-duration: 45s;
-  animation-delay: 10s;
-}
-.bubbles span:nth-child(8) {
-  left: 60%;
-  animation-duration: 50s;
-  animation-delay: 13s;
-}
-.bubbles span:nth-child(9) {
-  left: 65%;
-  animation-duration: 55s;
-  animation-delay: 15s;
-}
-.bubbles span:nth-child(10) {
-  left: 70%;
-  animation-duration: 60s;
-  animation-delay: 18s;
-}
-.bubbles span:nth-child(11) {
-  left: 75%;
-  animation-duration: 65s;
-  animation-delay: 20s;
-}
-
-
-/* aur bubbles ke liye aur nth-child rules */
+.bubbles span:nth-child(1){ left: 10%; animation-duration: 15s;}
+.bubbles span:nth-child(2){ left: 20%; animation-duration: 20s;}
+.bubbles span:nth-child(3){ left: 30%; animation-duration: 25s;}
+.bubbles span:nth-child(4){ left: 40%; animation-duration: 30s;}
+.bubbles span:nth-child(5){ left: 50%; animation-duration: 35s;}
+.bubbles span:nth-child(6){ left: 60%; animation-duration: 40s;}
+.bubbles span:nth-child(7){ left: 70%; animation-duration: 45s;}
+.bubbles span:nth-child(8){ left: 80%; animation-duration: 50s;}
 
 @keyframes bubble {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) scale(0.5);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) scale(1); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-1000px) scale(0.5); opacity: 0; }
 }
 
-.projects-wrapper {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  text-align: center;
+/* Card Animation */
+@keyframes fadeUpCard {
+  to { opacity: 1; transform: translateY(0); }
 }
+@keyframes shine {
+  0% { background-position: -100px; }
+  100% { background-position: 200px; }
+}
+
+/* --------- Responsive Tweaks --------- */
+@media (max-width: 768px) {
+  .project-title { font-size: 18px; }
+  .project-desc { font-size: 14px; }
+  .project-btn { width: 100%; text-align: center; }
+}
+
 
 
 
@@ -1515,29 +1330,28 @@
 
 
 
-   
-   <section id="about" class="about-modern">
-  <div class="about-wrapper">
-    <div class="about-photo fade-in-left">
-      <img src="image/sachin1.jpg" alt="Sachin's Photo" />
+   <!-- About Section -->
+  <section id="about" class="about-modern">
+    <div class="about-wrapper">
+      <div class="about-photo">
+        <img src="image/sachin1.jpg" alt="Sachin's Photo">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Dantani Sachin</strong>, a passionate <em>Web Developer</em> and <em>B.Com student</em> from Kanpur, India.</p>
+        <p>I specialize in crafting clean, responsive, and user-friendly web applications. With a strong foundation in both technology and business, I bring a unique perspective to every project I work on.</p>
+        <p>When I’m not coding, you’ll find me exploring the latest trends in UI/UX design, experimenting with new JavaScript frameworks, or diving into entrepreneurship ideas.</p>
+        <ul class="skills-list">
+          <li> Strong fundamentals in <strong>HTML, CSS, JavaScript</strong></li>
+          <li> Experienced with <strong>React</strong> and <strong>jQuery</strong></li>
+          <li> Skilled in <strong>Figma</strong> for UI/UX design</li>
+          <li> Basics of <strong>Python</strong> for automation</li>
+          <li> Business & tech mindset for scalable solutions</li>
+        </ul>
+        <a href="image/Sachin_Resume_python (1).pdf" class="about-btn" target="_blank">Download CV</a>
+      </div>
     </div>
-    <div class="about-text fade-in-right">
-      <h2>About Me</h2>
-      <p>Hello! I'm <strong>Dantani Sachin</strong>, a passionate <em>Web Developer</em> and <em>B.Com student</em> from Kanpur, India.</p>
-      <p>I specialize in crafting clean, responsive, and user-friendly web applications. With a strong foundation in both technology and business, I bring a unique perspective to every project I work on.</p>
-      <p>When I’m not coding, you’ll find me exploring the latest trends in UI/UX design, experimenting with new JavaScript frameworks, or diving into entrepreneurship ideas to bridge the gap between tech and business.</p>
-      <ul class="skills-list">
-        <li> Strong fundamentals in <strong>HTML, CSS, JavaScript</strong></li>
-        <li> Experienced with <strong>React</strong> and <strong>jQuery</strong> for dynamic web interfaces</li>
-        <li> Skilled in <strong>Figma</strong> for UI/UX design and prototyping</li>
-        <li> Basics of <strong>Python</strong> programming for automation and data handling</li>
-        <li> Business & tech mindset for building scalable and efficient solutions</li>
-      </ul>
-      <p>I believe technology can solve real-world problems and I’m excited to be part of that change by building impactful digital experiences.</p>
-      <a href="image/Sachin_Resume_python (1).pdf" class="about-btn" target="_blank">Download CV</a>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -1614,57 +1428,58 @@
 
 <section id="projects" class="projects-section">
   <div class="bubbles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <!-- aur bubbles ke liye aur spans -->
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span>
   </div>
+
   <div class="projects-wrapper">
     <h2 class="section-title">My Projects</h2>
     <div class="projects-grid">
+      
+      <!-- Project Card 1 -->
       <div class="project-card">
         <div class="project-thumb"></div>
         <h3 class="project-title">Portfolio Website</h3>
-        <p class="project-desc">A personal portfolio built using HTML, CSS, and JavaScript with smooth animations and responsive layout.</p>
+        <p class="project-desc">
+          A personal portfolio built using HTML, CSS, and JavaScript with smooth animations and responsive layout.
+        </p>
         <div class="project-buttons">
-  <a href="https://sachindantani33.github.io/portfolio-project/myportfolio"  class="project-btn">🔗 Live Demo</a>
-  <a href="https://github.com/sachindantani33/portfolio-project/commit/eb9466c8d853f8254122408d57d451c67aade057" target="_blank" class="project-btn">💻 View Code</a>
-</div>
-
+          <a href="https://sachindantani33.github.io/portfolio-project/myportfolio" class="project-btn">🔗 Live Demo</a>
+          <a href="https://github.com/sachindantani33/portfolio-project/commit/eb9466c8d853f8254122408d57d451c67aade057" target="_blank" class="project-btn">💻 View Code</a>
+        </div>
       </div>
+
+      <!-- Project Card 2 -->
       <div class="project-card">
         <div class="project-thumb"></div>
         <h3 class="project-title">Bootstrapmade Web-Template</h3>
-        <p class="project-desc">A live weather app built using JavaScript, Bootstrap, and weather API with animated icons and responsive design.</p>
+        <p class="project-desc">
+          A live weather app built using JavaScript, Bootstrap, and weather API with animated icons and responsive design.
+        </p>
         <div class="project-buttons">
-  <a href="https://sachindantani33.github.io/web-template/website" class="project-btn">🔗 Live Demo</a>
-  <a href="https://github.com/your-repo-link" target="_blank" class="project-btn">💻 View Code</a>
-</div>
-
+          <a href="https://sachindantani33.github.io/web-template/website" class="project-btn">🔗 Live Demo</a>
+          <a href="https://github.com/your-repo-link" target="_blank" class="project-btn">💻 View Code</a>
+        </div>
       </div>
+
+      <!-- Project Card 3 -->
       <div class="project-card">
         <div class="project-thumb"></div>
         <h3 class="project-title">TCP Website</h3>
-        <p class="project-desc">A task management app built with jQuery and local storage, styled with custom CSS and light/dark mode toggle.</p>
+        <p class="project-desc">
+          A task management app built with jQuery and local storage, styled with custom CSS and light/dark mode toggle.
+        </p>
         <div class="project-buttons">
-  <a href="https://sachindantani33.github.io/portfolio/tcp-website" class="project-btn">🔗 Live Demo</a>
-  <a href="https://github.com/your-repo-link" target="_blank" class="project-btn">💻 View Code</a>
-</div>
-
+          <a href="https://sachindantani33.github.io/portfolio/tcp-website" class="project-btn">🔗 Live Demo</a>
+          <a href="https://github.com/your-repo-link" target="_blank" class="project-btn">💻 View Code</a>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 
